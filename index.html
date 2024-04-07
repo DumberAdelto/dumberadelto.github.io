@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Adelto</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js"
+      integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  </head>
+
+  <body onmousemove="getCursor(event)">
+    <div id="trailer"></div>
+    <div class="noise"></div>
+    <div id="menu">
+      <button type="button" id="menu-toggle">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      <div id="menu-gradient"></div>
+      <div id="menu-gradient-blur"></div>
+      <div id="menu-arcs-wrapper">
+        <svg id="menu-arcs">
+          <circle class="menu-arc" cx="50%" cy="50%" r="18%"></circle>
+          <circle class="menu-arc" cx="50%" cy="50%" r="30%"></circle>
+          <circle class="menu-arc" cx="50%" cy="50%" r="42%"></circle>
+          <!-- <circle class="menu-arc" cx="50%" cy="50%" r="57%"></circle>
+          <circle class="menu-arc" cx="50%" cy="50%" r="65%"></circle> -->
+        </svg>
+      </div>
+      <div id="menu-links">
+        <a class="link" href="#hero">
+          <span class="anchor"></span>
+          <span class="index">01</span>
+          <span class="label">Home</span>
+        </a>
+        <a class="link" href="#about">
+          <span class="anchor"></span>
+          <span class="index">02</span>
+          <span class="label">About</span>
+        </a>
+        <!-- <a class="link" href="https://www.youtube.com/c/Hyperplexed">
+          <span class="anchor"></span>
+          <span class="index">03</span>
+          <span class="label">Satellite</span>
+        </a>
+        <a class="link" href="https://www.youtube.com/c/Hyperplexed">
+          <span class="anchor"></span>
+          <span class="index">04</span>
+          <span class="label">Asteroid</span>
+        </a> -->
+      </div>
+    </div>
+    <section id="hero">
+      <div class="hero" id="hero">
+        <h1 class="title" id="heroTitle">Hi, I'm Adelto.<br />I make stuff.</h1>
+      </div>
+    </section>
+    <section id="about">
+      <div class="about sectionInner">
+        <h1 class="title">About me</h1>
+        <p>
+          I'm a web developer/designer. I code in <span id="js">Javascript</span>, <span id="html">HTML</span>, <span id="css">CSS</span> and a *little* bit of <span id="cpp">C++</span>.
+        </p>
+        <br />
+        <div class="stats">
+          <div class="github statsItem">
+            <img src="media/dumberadelto.png" />
+            <h1>Github</h1>
+          </div>
+        </div>
+        <!-- <img src="https://github-stats-alpha.vercel.app/api?username=DumberAdelto&cc=000&tc=fff&ic=fff&bc=000"> -->
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
