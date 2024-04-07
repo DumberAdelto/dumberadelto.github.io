@@ -588,3 +588,16 @@ body:hover > #trailer {
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
 }
+
+#contact {
+  background-color: rgb(0, 26, 70);
+  padding: 100px;
+  color: white;
+  text-align: center;
+}
+
+#contact > div.sectionInner {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 25px;
+}
