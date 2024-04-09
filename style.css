@@ -1,3 +1,14 @@
+@media only screen and (max-width: 767px) {
+  #trailer {
+    display: none;
+  }
+
+  #menu-toggle {
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+  }
+}
+
 /* body, html {
   margin: 0;
   height: 100%;
@@ -64,8 +75,9 @@
 body {
   background-color: var(--background-dark);
   margin: 0px;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 0px;
+  width: 100vw;
   transition: background-color 600ms;
   cursor: none;
   scroll-behavior: smooth;
@@ -584,6 +596,7 @@ body:hover > #trailer {
     var(--purple)
   );
   background-size: 200%;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
@@ -601,3 +614,4 @@ body:hover > #trailer {
   padding: 30px;
   border-radius: 25px;
 } */
+
