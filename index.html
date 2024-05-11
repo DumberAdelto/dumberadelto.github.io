@@ -1,151 +1,198 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Adelto</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js"
-      integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Adelto</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js"
+            integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+        <meta content="Adelto" property="og:title" />
+        <meta
+            content="Hi, I'm Adelto. I make stuff."
+            property="og:description" />
+        <meta content="https://dumberadelto.github.io" property="og:url" />
+        <meta content="#001a46" data-react-helmet="true" name="theme-color" />
+    </head>
 
-  <body onmousemove="getCursor(event)">
-    <div id="trailer"></div>
-    <div class="noise"></div>
-    <div id="menu">
-      <button type="button" id="menu-toggle">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-      <div id="menu-gradient"></div>
-      <div id="menu-gradient-blur"></div>
-      <div id="menu-arcs-wrapper">
-        <svg id="menu-arcs">
-          <circle class="menu-arc" cx="50%" cy="50%" r="18%"></circle>
-          <circle class="menu-arc" cx="50%" cy="50%" r="30%"></circle>
-          <circle class="menu-arc" cx="50%" cy="50%" r="42%"></circle>
-          <!-- <circle class="menu-arc" cx="50%" cy="50%" r="57%"></circle>
+    <body onmousemove="getCursor(event)">
+        <div id="trailer"></div>
+        <div class="noise"></div>
+        <div id="menu">
+            <button type="button" id="menu-toggle">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <div id="menu-gradient"></div>
+            <div id="menu-gradient-blur"></div>
+            <div id="menu-arcs-wrapper">
+                <svg id="menu-arcs">
+                    <circle class="menu-arc" cx="50%" cy="50%" r="18%"></circle>
+                    <circle class="menu-arc" cx="50%" cy="50%" r="30%"></circle>
+                    <circle class="menu-arc" cx="50%" cy="50%" r="42%"></circle>
+                    <!-- <circle class="menu-arc" cx="50%" cy="50%" r="57%"></circle>
           <circle class="menu-arc" cx="50%" cy="50%" r="65%"></circle> -->
-        </svg>
-      </div>
-      <div id="menu-links">
-        <a class="link" href="#hero" class="interactablelink">
-          <span class="anchor"></span>
-          <span class="index">01</span>
-          <span class="label">Home</span>
-        </a>
-        <a class="link" href="#about" class="interactablelink">
-          <span class="anchor"></span>
-          <span class="index">02</span>
-          <span class="label">About</span>
-        </a>
-        <!-- <a class="link" href="https://www.youtube.com/c/Hyperplexed">
+                </svg>
+            </div>
+            <div id="menu-links">
+                <a class="link" href="#hero" class="interactablelink">
+                    <span class="anchor"></span>
+                    <span class="index">01</span>
+                    <span class="label">Home</span>
+                </a>
+                <a class="link" href="#about" class="interactablelink">
+                    <span class="anchor"></span>
+                    <span class="index">02</span>
+                    <span class="label">About</span>
+                </a>
+                <!-- <a class="link" href="https://www.youtube.com/c/Hyperplexed">
           <span class="anchor"></span>
           <span class="index">03</span>
           <span class="label">Satellite</span>
         </a> -->
-        <a class="link" href="#contact" class="interactablelink">
-          <span class="anchor"></span>
-          <span class="index">03</span>
-          <span class="label">Contact Me</span>
-        </a>
-      </div>
-    </div>
-    <section id="hero">
-      <div class="hero" id="hero">
-        <h1 class="title" id="heroTitle">Hi, I'm Adelto.<br />I make stuff.</h1>
-      </div>
-    </section>
-    <section id="about">
-      <div class="about sectionInner">
-        <h1 class="title">About me</h1>
-        <p>
-          I'm a web developer/designer. I code in
-          <span id="js">Javascript</span>, <span id="html">HTML</span>,
-          <span id="css">CSS</span> and a *little* bit of
-          <span id="cpp">C++</span>.
-          <br>
-          I run a company named <span class="magic">
-            <span class="magic-star">
-              <svg viewBox="0 0 512 512">
-              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-              </svg>
-            </span>
-            <span class="magic-star">
-              <svg viewBox="0 0 512 512">
-              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-              </svg>
-            </span>
-            <span class="magic-star">
-              <svg viewBox="0 0 512 512">
-              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-              </svg>
-            </span>
-            <span class="magic-star">
-              <svg viewBox="0 0 512 512">
-              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-              </svg>
-            </span>
-            <span class="magic-star">
-              <svg viewBox="0 0 512 512">
-              <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
-              </svg>
-            </span>
-            <span class="magic-text" onclick="">Deepen Development.</span>
-          </span><br><br>I'm not just a nerd though, (maybe)..., I do some other stuff too! I make robots.. which now that I think about it, it IS more nerd stuff... (send help)
-        </p>
-      </div>
-        <!-- <img src="https://github-stats-alpha.vercel.app/api?username=DumberAdelto&cc=000&tc=fff&ic=fff&bc=000"> -->
-      </div>
-    </section>
-    <!-- <section id="works">
-      <div class="card">
-        <h1>Secr</h1>
-      </div>
-    </section> -->
-    <section id="contact" style="background-color: rgb(0, 26, 70); padding: 100px; color: white; text-align: center;">
-      <div class="contact sectionInner" style="background-color: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 25px;">
-        <div align="center">
-          <h1>Contact me.<br>Hey, I'll probably respond on Discord.</h1>
-          <a href="https://twitter.com/deependevs" target="_blank">
-            <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="52" height="40" alt="twitter logo"  />
-          </a>
-          <a href="https://dsc.gg/deependev" target="_blank">
-            <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/discord/default.svg" width="52" height="40" alt="discord logo"  />
-          </a>
-          <a href="https://www.youtube.com/@DeepenDevelopment" target="_blank">
-            <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/youtube/default.svg" width="52" height="40" alt="youtube logo"  />
-          </a>
-          <a href="https://www.instagram.com/deepen_development/" target="_blank">
-            <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40" alt="instagram logo"  />
-          </a>
+                <a class="link" href="#contact" class="interactablelink">
+                    <span class="anchor"></span>
+                    <span class="index">03</span>
+                    <span class="label">Contact Me</span>
+                </a>
+            </div>
         </div>
-        <p id="disclaimers">© 2024 Adelto. All rights reserved. Unless otherwise stated, all content is licensed under the Creative Commons Attribution-NonCommercial (CC BY-NC) license.
-<br><br>
-          Disclaimer: Adelto is not affiliated with Instagram, Youtube, X or Discord in any way.</p>
-      </div>
-    </section>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script src="script.js"></script>
-  </body>
+        <section id="hero">
+            <div class="hero" id="hero">
+                <h1 class="title" id="heroTitle">
+                    Hi, I'm Adelto.<br />I make stuff.
+                </h1>
+            </div>
+        </section>
+        <section id="about">
+            <div class="about sectionInner">
+                <h1 class="title">About me</h1>
+                <p>
+                    I'm a web developer/designer. I code in
+                    <span id="js">Javascript</span>,
+                    <span id="html">HTML</span>, <span id="css">CSS</span> and a
+                    *little* bit of <span id="cpp">C++</span>.
+                    <br />
+                    I run a company named
+                    <span class="magic">
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star">
+                            <svg viewBox="0 0 512 512">
+                                <path
+                                    d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+                            </svg>
+                        </span>
+                        <span class="magic-text" onclick=""
+                            >Deepen Development.</span
+                        > </span
+                    ><br /><br />I'm not just a nerd though, (maybe)..., I do
+                    some other stuff too! I make robots.. which now that I think
+                    about it, it IS more nerd stuff... (send help)
+                </p>
+            </div>
+        </section>
+        <section
+            id="contact"
+            style="
+                background-color: rgb(0, 26, 70);
+                padding: 100px;
+                color: white;
+                text-align: center;
+            ">
+            <div
+                class="contact sectionInner"
+                style="
+                    background-color: rgba(255, 255, 255, 0.1);
+                    padding: 30px;
+                    border-radius: 25px;
+                ">
+                <div align="center">
+                    <h1>
+                        Contact me.<br />Hey, I'll probably respond on Discord.
+                    </h1>
+                    <a href="https://twitter.com/deependevs" target="_blank">
+                        <img
+                            src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg"
+                            width="52"
+                            height="40"
+                            alt="twitter logo" />
+                    </a>
+                    <a href="https://dsc.gg/deependev" target="_blank">
+                        <img
+                            src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/discord/default.svg"
+                            width="52"
+                            height="40"
+                            alt="discord logo" />
+                    </a>
+                    <a
+                        href="https://www.youtube.com/@DeepenDevelopment"
+                        target="_blank">
+                        <img
+                            src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/youtube/default.svg"
+                            width="52"
+                            height="40"
+                            alt="youtube logo" />
+                    </a>
+                    <a
+                        href="https://www.instagram.com/deepen_development/"
+                        target="_blank">
+                        <img
+                            src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg"
+                            width="52"
+                            height="40"
+                            alt="instagram logo" />
+                    </a>
+                </div>
+                <p id="disclaimers">
+                    © 2024 Adelto. All rights reserved. Unless otherwise stated,
+                    all content is licensed under the Creative Commons
+                    Attribution-NonCommercial (CC BY-NC) license. <br /><br />
+                    Disclaimer: Adelto is not affiliated with Instagram,
+                    Youtube, X or Discord in any way.
+                </p>
+            </div>
+        </section>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="script.js"></script>
+    </body>
 </html>
